@@ -218,7 +218,10 @@ jobs:
       run: |
         cd openwrt
         if [[ ${{matrix.target}} =~ (Lede_phicomm_n1|Project_phicomm_n1) ]]; then
-          git clone -b main https://github.com/haohaoget/N1
+          cd ../
+          svn co https://github.com/haohaoget/N1/trunk
+          cp trunk/common1.sh ./
+          cp trunk/mk_openwrt_src_20210304.tar.gz ./
           source "common1.sh" && Diy_n1
           cd /opt/openwrt/tmp
           filename=$(ls | awk -F '.img' '{print $1}')
