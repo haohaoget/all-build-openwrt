@@ -228,7 +228,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/opt/openwrt/tmp
           filename=$(ls | awk -F '.img' '{print $1}')
           gzip *.img
-          mv -f *.img.gz openwrt/bin/targets/armvirt/*
+          mv -f *.img.gz ${GITHUB_WORKSPACE}/openwrt/bin/targets/armvirt/*
           cd ../../../
           echo "firmware_phicomm_n1=$filename" >> $GITHUB_ENV
         fi
