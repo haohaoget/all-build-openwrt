@@ -225,7 +225,7 @@ jobs:
           cp trunk/common1.sh ./
           cp trunk/mk_openwrt_src_20210304.tar.gz ./
           source "common1.sh" && Diy_n1
-          cd /opt/openwrt/tmp
+          cd ${GITHUB_WORKSPACE}/opt/openwrt/tmp
           filename=$(ls | awk -F '.img' '{print $1}')
           gzip *.img
           mv -f *.img.gz openwrt/bin/targets/armvirt/*
