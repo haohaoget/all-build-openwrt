@@ -7,8 +7,8 @@
 # 想要什么插件就单独的拉取什么插件就好，或者告诉我，我把插件放我的插件包就行了
 # 软件包地址：https://github.com/281677160/openwrt-package
 # 拉取插件请看《各种命令的简单介绍》第4条、第5条说明,不管大神还是新手请认真的看看,再次强调请不要一下子就拉取别人一堆插件的插件包,容易造成编译错误的
-svn co https://github.com/Lienol/openwrt-luci/branches/18.06/themes
-cp -r themes/luci-theme-argon-dark-mod package/lean
-cp -r themes/luci-theme-argon-light-mod package/lean
-cp -r themes/luci-theme-bootstrap-mod package/lean
-cp -r themes/luci-theme-darkmatter package/lean
+svn co https://github.com/Lienol/openwrt-luci/trunk
+cp -r trunk/themes/luci-theme-argon-dark-mod package/lean
+cp -r trunk/themes/luci-theme-argon-light-mod package/lean
+cp -r trunk/themes/luci-theme-bootstrap-mod package/lean
+cp -r trunk/themes/luci-theme-darkmatter package/lean
